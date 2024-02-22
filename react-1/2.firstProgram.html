@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #heading{
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The root element where the React component will be rendered -->
+    <h1>this will not get Replaced</h1>
+    <div id="root">
+      <!-- <h1>jo likhenge wo react object se REPLACED not append ho jayega</h1> -->
+    </div>
+    <h1>this will not get Replaced</h1>
+   
+
+    <!-- Include React and ReactDOM scripts from unpkg CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+      // Create a React element (a heading with text) {is attribute} {Hello World... are the children which will go inside h1 tag}
+      const heading = React.createElement("h1", {id:"heading", class:"headings"}, "Hello World with the help of React");
+
+      // if we console.log(heading) it will not give h1 tag , instead it is a react element(or we can javascript objevt) and at the end of the day we have have created a react element(or object), aur jab yeh react elemnt root.render mai jayega to react will convert this object into h1 tag(HTML which browser understand)
+
+      // Create a root and specify the location in the element with the id "root"
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      // Render the heading element within the specified root
+      root.render(heading);
+
+
+
+
+    // question 2 : what if we want to render Nested Element? like 
+    //   <div id="parent">
+    //   <div id="child">
+    //     <h1>I am H1 Tag</h1>
+    //     <h2>I am H2 Tag</h2>
+    //   </div>
+    // </div>
+
+    // sol:
+
+    // const parent = React.createElement("div" , {id : "parent"} , yaha pe child aayega )
+    // const parent = React.createElement("div", { id: "parent" }, React.createElement("div", { id: "child" }, 
+    //       [React.createElement("h1", {}, "I am an H1 tag",React.createElement("h2", {}, "I am an H2 tag")] array of children[]
+    //     )
+    //   );
+    // const root = ReactDOM.createRoot(document.getElementById("root"));
+    // root.render(parent);
+
+    // q3:   <div id="parent">
+    // //   <div id="child">
+    // //     <h1>I am H1 Tag</h1>
+    // //     <h2>I am H2 Tag</h2>
+    // //   </div>
+    // // </div>  <div id="parent">
+    // //   <div id="child">
+    // //     <h1>I am H1 Tag</h1>
+    // //     <h2>I am H2 Tag</h2>
+    // //   </div>
+    // // </div>
+    // sol: It become Complicated thats why there is JSX
+    </script>
+  </body>
+</html>
