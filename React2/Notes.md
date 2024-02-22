@@ -14,7 +14,7 @@ specifies project metadata and dependencies
 <!-- why we need: -->
 npm wil take care of version of package and where it takes it takes in package.json
 
-so we dont need to put nodemodule in github and we can stop it by writin node_module in gitignire
+so we dont need to put nodemodule in github and we can stop it by writin node_module in gitignore also add parcel-cahce and dist folder as all these can regenerated
 
 <!-- our project is dependent on lots of dependencies or package 
 
@@ -57,7 +57,7 @@ first of all there are two dependencies : dev dependencies[-D](genrally required
 
 
 Parcel Gives
-- HMR = Hot Module Replacement:File Watching Algorithm - written in C++
+- HMR or Hot Reloading= Hot Module Replacement:File Watching Algorithm - written in C++
 - -Caching
 - Faster Builds
 - Dev Build
@@ -66,6 +66,14 @@ Parcel Gives
 - Minification
 - Bundling
 - Compress
+- Consistent Hasihng
+- Code Splitting
+- Differnetial Bundling (support older browser)
+- Diagnostic 
+- Error Handling
+- Also give enviroment for https
+- Tree Shaking Algorithm(remove unused code)
+
 # configuration
 
 ```
@@ -93,4 +101,7 @@ npx:eXcecute is used to execute packages without installing them globally. It al
 
 HMR: hot module Replacment(automaic run as we change the code) with help of file watching algorithm writen in c++
 every time faster every time built (by caching-u can see in Parcel-cache)
+
+<!-- npx build -->
+it will bundle ,minified and put inside dist folder and the ouptput is cooming from dist folder and push so user can use as it size is low dont take much time
 ```
