@@ -65,7 +65,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index.html --hmr",
     "build": "parcel build index.html",
     "test": "jest"
   },
