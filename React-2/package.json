@@ -1,0 +1,15 @@
+{
+  "name": "react2",
+  "version": "1.0.0",
+  "description": "making na understanding Basics of react and npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "reactjs"
+  ],
+  "author": "Hasir Ali",
+  "license": "ISC"
+}
