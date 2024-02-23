@@ -1,4 +1,4 @@
-# JSX In Depth
+# JSX In Depth & React Element
  ```
 const heading = React.createElement("h1",{id:child},"Namaste React")
 ```
@@ -31,6 +31,48 @@ with the help of Babel (module)
 ```
  React.createElement("h1",{id:child},"Namaste React by JSX")
 ```
+
+
+# React Component
+> There are two Component in React
+
+1) Class based Compnent(Old)
+2) Functional Component(New)
+
+> Functional Component
+- React FUnctional Compoent : RFC is a just a normal javascript function whcich return jsx elemnt or React component or bunch of React Component
+- name with Capital letter
+
+ example: 
+```
+const HeadingCompnent =()=>{
+    return <h1>this is example of component</h1>
+}
+```
+
+and reacr compnent is render by 
+```
+root.render(<HeadingComponent />);
+```
+and babael also understand that this is a component.
+
+ 
+a) Component Compoistion:Component le andar Component
+Now, I have two Component and want to render title in heading then what i do 
+```
+const Title=()=>{
+    return <h1>this is example of component</h1>
+}
+
+
+const HeadingCompnent =()=>{
+    <Title/>(all code of title come here)
+    return <h1>this is example of component</h1>
+}
+
+root.render(<HeadingComponent>/)
+```
+
 
 # EXTRA
 - when use console.log(headingjsx) and console.log(heading)
